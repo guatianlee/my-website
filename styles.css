@@ -3,15 +3,67 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
 }
 
 h1 {
-    color: #333;
     text-align: center;
-    margin-top: 50px;
 }
 
-p {
-    text-align: center;
-    color: #666;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    height: 100px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#entries {
+    margin-top: 20px;
+}
+
+#entries h2 {
+    margin-bottom: 10px;
+}
+
+#entriesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#entriesList li {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
