@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('diaryForm');
     const diaryEntry = document.getElementById('diaryEntry');
     const entriesList = document.getElementById('entriesList');
-    const entries = JSON.parse(localStorage.getItem('entries')) || [];
+    let entries = JSON.parse(localStorage.getItem('entries')) || [];
 
     function saveEntries() {
         localStorage.setItem('entries', JSON.stringify(entries));
@@ -29,21 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         displayEntries();
     }
 
-    function editEntry(index) {
-        const newText = prompt('Edit your entry:', entries[index].text);
-        if (newText) {
-            entries[index].text = newText;
-            saveEntries();
-            displayEntries();
-        }
-    }
-
-    function deleteEntry(index) {
-        entries.splice(index, 1);
-        saveEntries();
-        displayEntries();
-    }
-
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const entryText = diaryEntry.value;
@@ -53,20 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    displayEntries();
-});
+    window.editEntry = function(index) {
+        const newText = prompt('Edit your entry:', entries[index].text);
+        if (newText) {
+            entries[index].text = newText;
+            saveEntries();
+            displayEntries();
+        }
+    }
 
-function editEntry(index) {
-    const newText = prompt('Edit your entry:', entries[index].text);
-    if (newText) {
-        entries[index].text = newText;
+    window.deleteEntry = function(index) {
+        entries.splice(index, 1);
         saveEntries();
         displayEntries();
     }
-}
 
-function deleteEntry(index) {
-    entries.splice(index, 1);
-    saveEntries();
     displayEntries();
-}
+});
