@@ -1,99 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    background: white;
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-height: 90vh;
     overflow-y: auto;
 }
 
-h1 {
-    text-align: center;
+main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+#search-container {
+    margin-bottom: 20px;
 }
 
-textarea {
-    margin-bottom: 10px;
+#search-input {
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    height: 100px;
 }
 
-button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#entries {
-    margin-top: 20px;
-}
-
-#entries h2 {
-    margin-bottom: 10px;
-}
-
-#entriesList {
+#nav-list {
     list-style-type: none;
     padding: 0;
 }
 
-#entriesList li {
-    background: #f4f4f4;
+#nav-list li {
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.entry-text {
-    flex: 1;
+#nav-list a {
+    text-decoration: none;
+    color: #333;
 }
 
-.entry-date {
-    margin-left: 10px;
-    font-size: 12px;
-    color: #999;
-}
-
-button.edit-btn, button.delete-btn {
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 12px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button.edit-btn:hover, button.delete-btn:hover {
-    background-color: #0056b3;
+#content {
+    line-height: 1.6;
 }
