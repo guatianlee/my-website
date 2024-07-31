@@ -5,30 +5,24 @@ body, html {
 }
 
 header {
-    background-color: #ffcb08;
-    padding: 10px 0;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e7e7e7;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
+header h1 {
+    margin: 0;
     font-size: 24px;
-    font-weight: bold;
 }
 
 header nav ul {
     list-style-type: none;
-    display: flex;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
 
 header nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
@@ -37,21 +31,19 @@ header nav ul li a {
     color: #333;
 }
 
-header nav ul li a.active {
-    font-weight: bold;
-}
-
 .search-container {
-    display: flex;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
 }
 
-.search-container input {
+.search-container input[type="text"] {
     padding: 5px;
+    width: 200px;
 }
 
 .search-container button {
     padding: 5px 10px;
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
@@ -59,23 +51,36 @@ header nav ul li a.active {
 
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
+    margin-top: 20px;
 }
 
 #sidebar {
     width: 250px;
-    padding: 20px;
+    padding: 0 20px;
+}
+
+#sidebar h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+#nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav-list li {
+    margin-bottom: 10px;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: #333;
 }
 
 main {
     flex-grow: 1;
-    padding: 20px;
-}
-
-#toc {
-    width: 200px;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .breadcrumb {
@@ -85,42 +90,4 @@ main {
 .breadcrumb a {
     color: #333;
     text-decoration: none;
-}
-
-#nav-list, #toc ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#nav-list li, #toc li {
-    margin-bottom: 10px;
-}
-
-#nav-list a, #toc a {
-    text-decoration: none;
-    color: #333;
-}
-
-.code-block {
-    position: relative;
-    margin: 20px 0;
-}
-
-.code-block pre {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-
-.copy-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
 }
