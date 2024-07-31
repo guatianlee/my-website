@@ -11,30 +11,24 @@
         <h1>极客侠GeeksMan</h1>
         <nav>
             <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">STM32</a></li>
-                <li><a href="#">ESP32</a></li>
+                <li><a href="#" id="home">首页</a></li>
+                <li><a href="#" id="stm32">STM32</a></li>
+                <li><a href="#" id="esp32">ESP32</a></li>
             </ul>
         </nav>
     </header>
     <div class="search-container">
-        <input type="text" placeholder="搜索...">
+        <input type="text" id="search-input" placeholder="搜索...">
         <button type="submit">搜索</button>
     </div>
     <div class="container">
         <nav id="sidebar">
-            <h2>STM32 教程</h2>
-            <ul id="nav-list">
-                <!-- 导航项会通过JavaScript动态添加 -->
-            </ul>
+            <h2 id="sidebar-title">STM32 教程</h2>
+            <ul id="nav-list"></ul>
         </nav>
         <main>
-            <div class="breadcrumb">
-                <a href="#">首页</a> / <a href="#">STM32 单片机</a>
-            </div>
-            <div id="content">
-                <!-- 文档内容会通过JavaScript动态加载 -->
-            </div>
+            <div id="breadcrumb"></div>
+            <div id="content"></div>
         </main>
     </div>
     <script src="script.js"></script>
