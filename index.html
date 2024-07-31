@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Diary</title>
+    <title>我的文档网站</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>My Diary</h1>
-        <form id="diaryForm">
-            <textarea id="diaryEntry" placeholder="Write your diary entry here..."></textarea>
-            <button type="submit">Save Entry</button>
-        </form>
-        <div id="entries">
-            <h2>Previous Entries</h2>
-            <ul id="entriesList"></ul>
-        </div>
+        <nav id="sidebar">
+            <h1>文档目录</h1>
+            <ul id="nav-list">
+                <!-- 导航项会通过JavaScript动态添加 -->
+            </ul>
+        </nav>
+        <main>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="搜索文档...">
+            </div>
+            <div id="content">
+                <!-- 文档内容会通过JavaScript动态加载 -->
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
